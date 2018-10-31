@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+    <title>Registro de mascotas</title>
+    
+  <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+  <script src="jquery-3.2.1.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="{% static 'css/form3.css' %}">
+</head>
+<br>
+<br>
+<br>
+<br>
+<body background="{% static 'img/fondologin.jpg' %}">
+    <section class="content-form">
+        <h2 class="sub-title">Inicio de sesión administradores</h2>
+            <br>
+      <form method="POST" action="">
+              <!-- Método para pasar a la página siguiente --> 
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <div align="right">
+        <input class="btn" type="submit" value="Ingresar">
+        <input type="hidden" name="next" value="{{ next }}">
+              <!-- Método para pasar a la página siguiente -->
+        </div>      
+    </form>
+
+    </section>
+<br>
+<br>
+<br>
+<br>
+<footer>
+  <div class="derechos">
+    Derechos Reservados © <a target="_blank">Mis Perris</a>  2018  
+  </div>
+</footer>
+  
+</body>
+</html>

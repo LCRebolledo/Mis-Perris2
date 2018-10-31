@@ -1,0 +1,38 @@
+{% extends 'adopcion/base.html' %}
+
+{% block title %} Listado de mascotas registradas {% endblock %}
+
+
+{% block content %}
+
+<table class="table table-bordered"> 
+ 	<thread>
+ 		<tr>
+ 			<H1 align="center">Registro de mascotas</H1>
+ 			<td>#</td>
+ 			<td>Nombre</td>
+ 			<td>Raza</td>
+ 			<td>Estado</td>
+ 			<td>Descripcion</td>
+ 			<td>Foto</td>
+ 		</tr>
+ 	</thread>
+ 	<tbody>
+ 		{% if mascota %}
+ 		{% for mascotas in mascota %}
+ 		<tr>
+
+ 			<td>{{ mascotas.id}}</td>
+ 			<td>{{ mascotas.nombre}}</td>
+ 			<td>{{ mascotas.raza}}</td>
+ 			<td>{{ mascotas.estado}}</td>
+ 			<td>{{ mascotas.descripcion}}</td>
+ 			<td>{{ mascotas.imagen}}</td>
+ 	  	</tr>
+ 	  	{% endfor%}
+ 	  	{% else%}
+ 	  	<h1>No hay mascotas registradas</h1>
+ 	  	{% endif %}
+ 	</tbody>
+</table>
+{% endblock %}

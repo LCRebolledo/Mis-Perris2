@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.css' %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'custom.min.css' %}"> 
+    <title>{% block title %} Base {% endblock %}</title>
+</head>
+<body background="{% static 'img/fondologin.jpg' %}">
+	<section class="content-form">
+    {% block content %}
+
+    {% endblock content %}
+    </section>
+</body>
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'js/materialize.min.js' %}"></script>
+</html>

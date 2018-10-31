@@ -1,0 +1,16 @@
+{% extends "adopcion/base.html" %}
+
+{% block title %}Inicia Sesión{% endblock %}
+
+{% block content %}
+    <form method="POST" action="http://127.0.0.1:8000/admin/">
+        			<!-- Método para pasar a la página siguiente -->
+    	
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Ingresar">
+        <input type="hidden" name="next" value="{{ next }}">
+        			<!-- Método para pasar a la página siguiente -->
+    </form>
+
+{% endblock content %}

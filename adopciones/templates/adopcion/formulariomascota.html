@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+    <title>Registro de mascotas</title>
+    
+	<link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+	<script src="jquery-3.2.1.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="{% static 'css/form2.css' %}">
+</head>
+<body background="{% static 'img/fondo.jpg' %} ">
+<br>
+<br>
+<br>
+<br>
+		<section class="content-form">
+				<h2 class="sub-title">Formulario de registro de mascotas</h2>
+		        <br>
+		    <form method="POST">
+					{% csrf_token %}
+					{{ form.as_p }}
+					<br>
+			<div align="right" class="botonp">
+				<button  class="btn" type="submit">Guardar</button>
+			</div>
+			</form>                             
+		</section>
+<br>
+<br>
+<br>
+<br>
+	<footer>
+		<div class="derechos">
+			Derechos Reservados © <a target="_blank">Mis Perris</a>  2018  
+		</div>
+	</footer>	
+</body>
+</html>

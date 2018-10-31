@@ -1,0 +1,15 @@
+{% extends 'adopcion/base.html' %}
+
+{% block title %}Registro de mascotas{% endblock %}
+
+{% block content %}
+
+
+<form method="POST">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<button type="submit">Guardar Registro</button>
+</form>
+
+
+{% endblock %}

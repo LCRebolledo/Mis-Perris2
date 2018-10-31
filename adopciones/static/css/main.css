@@ -1,0 +1,331 @@
+*{
+    
+    margin;0;
+    padding: 0;
+    box-sizing: border-box;
+}
+Header {
+	
+	background: #73FFBF;
+	width:auto;
+	height:65px;
+    
+}
+
+.admin{
+
+    width: 100%;
+    margin: auto;
+    margin-right: 50%;
+     transform: translateX(28%);
+}
+
+header img{
+    width: 300px;
+    margin: 0;
+    height: 100%;
+    display: block;
+}
+
+nav{
+    width: 100%;
+    height: 55px;
+    background:  #16caa4;
+    border: none;
+    border-color: #16caa4;   
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+
+.contenido{
+    width: 100%;
+    margin: auto;
+    
+}
+
+.rescate{
+    
+    text-align: right
+}
+
+.crow{
+    
+    text-align: left;
+}
+
+
+
+body {
+	
+	background:  #fff;
+	width:auto;
+	height:auto;
+}
+
+a{
+	text-decoration:none;
+	color:white;
+    display: block;
+	
+}
+
+
+.contenido2
+{
+	font-family: Arial, sans-serif;
+	background: white;
+	color: black;
+	width: 48%;
+    float: right;
+    height: 100%;
+    padding: 10px;
+
+}
+
+.contenido1{
+	
+	font-family: Arial, sans-serif;
+	background: white;
+	color: black;
+	width: 52%;	
+    height: 465px;
+    float: left;
+    padding: 10px;
+
+}
+
+.contenido1 img{
+    float: right;
+    width:40%;
+    height:auto;
+}
+.contenido1 h2{
+    
+    text-align: right;
+}
+.contenido1 p{
+    text-align: right;
+}
+
+.contenido2 img{
+    
+    float: left;
+    width:40%; 
+    height:auto;
+}
+
+
+p{
+	color: gray;
+}
+
+.carrusel{
+    padding: 1.5%;
+    bottom: 30%;
+    background: #16caa4
+    
+}
+
+.iconos{
+    background:  #16caa4;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.iconos img{
+    
+    width: 40px;
+    height: 40px;
+    
+ 
+}
+
+.iconos a {
+    
+    width: 4%;
+    height: auto;
+    padding: 3px;
+ 
+}
+
+.galeria{
+    
+    background: #16caa4;
+    width: 100%;
+    margin: auto;
+    list-style: none;
+    padding: 12px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.galeria li{
+    margin: 5px;
+}
+
+.galeria img{
+    width: 150px;
+    height: 100px;
+    border: 7px solid #6CEAB6  ;
+}
+
+.visor{
+    display: none;
+    
+}
+
+.visor:target {
+    
+    display: block;
+    position: fixed;
+    background: rgba(0,0,0,0.8);
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.visor h3{
+    
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    margin: 50px 0;
+    
+}
+
+.ima{
+    
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ima a{
+    color: #fff;
+    font-size: 40px;
+    text-decoration: none;
+    margin: 0 10px;
+    
+}
+
+.ima img{
+    width: 500px;
+    height: 100%;
+    max-width: 100%;
+    border: 7px solid #000;
+    box-sizing: border-box;
+}
+
+.cerrar{
+    display: block;
+    background: #fff;
+    width: 25px;
+    height: 25px;
+    margin: 30px auto;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+    border-radius: 50%;
+    line-height: 14px;
+}
+
+footer{
+    background: #D7DEDB;
+    width: 100%;
+    height: 50px;
+    
+}
+
+footer p{
+    
+    color: #000;
+}
+
+@media screen and (max-width:400px){
+    
+   .contenido1{
+                
+    background: #fff;
+    text-align: right;
+    height: 48%;
+    width: 100%;
+    float: left;
+    }
+    
+    .contenido1 img{
+    
+    height: 90px;
+    width: auto;
+    }
+    
+    .rescate{
+    
+    font-size: 11px;
+    text-align: right;
+}
+    
+    .contenido2{
+        
+    background: #fff;
+    text-align: left;
+    height: 48%;
+    width: 100%;
+    float: right;
+    }
+ 
+    .contenido2 img{
+        
+    height: 99px;
+    width: auto;
+    }
+    
+    .crow{
+    
+     font-size: 11px;
+    text-align: left;
+}
+    
+    .titulo1{
+        font-size: 25px;
+        
+    }
+    
+    .titulo2{
+        font-size: 25px;
+        
+    }
+    
+    .iconos{
+    background:  #16caa4;
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+    
+    .iconos a {
+    
+    width: 17%;
+    height: auto;
+    padding: 2px;
+ 
+}
+    
+}

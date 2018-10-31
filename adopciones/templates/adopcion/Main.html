@@ -1,0 +1,163 @@
+ <!DOCTYPE html>
+ {% load static %}
+  <html lang="en">
+    <head>
+        <title>Página principal</title>
+
+	  <meta charset="utf-8">
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+          
+     <link rel="stylesheet" href="{% static 'css/main.css' %}">
+          
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+	  
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    
+<body>
+
+<header>
+        <div class="contenido">
+            <img src='{% static "img/logo.png" %}' alt="logoprincipal">
+                <nav>
+                    <div class="nav-wrapper">
+                            {% if user.is_authenticated %}
+                             <ul id="nav-mobile" class="left ">
+                            <li><a href="http://127.0.0.1:8000/admin/adopciones/mascotas/add/">Agregar un rescatado</a></li>
+                            <li><a href="http://127.0.0.1:8000/listar/">Lista rescatados</a></li>
+                            <li><a href="http://127.0.0.1:8000/admin/">Panel de administración</a></li>
+                            <li><a href="{% url 'sign_out' %}">Cerrar sesión</a></li>
+                          </ul>
+                            {% else %}
+                               <a href="#" class="brand-logo"></a>
+                          <ul id="nav-mobile" class="left ">
+                            <li><a href="http://127.0.0.1:8000/somos/">Quienes somos</a></li>
+                            <li><a href="#">Servicios</a></li>
+                            <li><a href="#">Contactenos</a></li>
+                          </ul>
+                            <a class="admin" align="center" href="http://127.0.0.1:8000/inicia-sesion/">Sesión administrador</a>
+                            {% endif%}
+                    </div>
+                </nav>
+        </div>
+		</header>
+        <br>
+        <br>
+       <section class="carrusel">
+            <div class="carousel carousel-slider">
+                <a class="carousel-item" href="#one!"><img src='{% static "img/adop1.jpg" %}' alt="ado1"></a>
+                <a class="carousel-item" href="#two!"><img src='{% static "img/adop2.png" %}' alt="ado2"></a>
+                <a class="carousel-item" href="#three!"><img src='{% static "img/adop3.jpg" %}' alt="ado3"></a>      
+            </div> 
+      </section>
+        <div class="iconos">
+           <a href="#" ><img src='{% static "img/imgface.png" %}' alt="face"> </a>
+           <a href="#" ><img src='{% static "img/imginsta.png" %}' alt="insta"> </a>
+           <a href="#" ><img src='{% static "img/imgcorreo.png" %}' alt="correo" > </a>
+        </div>
+	<br>
+	   
+        <div class="contenido1">
+				<h2 class="titulo1"><b>RESCATE</b></h2>
+				<p><b>ETAPA UNO</b></p>
+				<br>
+				<p class="rescate"> Rescatamos perros en situación en peligro y/o abandono. Los rehabilitamos y los preparamos para buscarles un hogar.</p>
+				<img src='{% static "img/rescate.jpg" %}' alt="resc">
+			</div>
+			<div class="contenido2">
+				<img src='{% static "img/CROWFUNDING.jpg" %}' alt="crowf">
+				<h2 class="titulo2"><b>CROWFUNDING</b></h2>
+				<p ><b>FINANCIAMIENTO</b></p>
+				<br>
+				<p class="crow"> Sigue nuestras redes sociales para informarte hacerca de las diversas campañas y actividades que realizamos para obtener financiamiento para seguir ayudando.</p>
+				 <a class="btn">Campañas</a>
+              {% if user.is_authenticated %}
+              
+              {% else %}
+              <a class="btn" href="http://127.0.0.1:8000/registrar">Registrate!</a>   
+              {% endif%}
+           </div>
+        <br>
+        
+        <ul class="galeria">
+            <li><a href="#img1"><img src='{% static "img/img1.jpg" %}' alt="perr1"> </a></li>
+            <li><a href="#img2"><img src='{% static "img/img2.jpg" %}' alt="perr2"> </a></li>
+            <li><a href="#img3"><img src='{% static "img/img3.jpg" %}' alt="perr3"> </a></li>
+            <li><a href="#img4"><img src='{% static "img/img4.jpg" %}' alt="perr4"> </a></li>
+            <li><a href="#img5"><img src='{% static "img/img5.jpg" %}' alt="perr5"> </a></li>
+            <li><a href="#img6"><img src='{% static "img/img6.jpg" %}' alt="perr6"> </a></li>
+        </ul>
+        
+        <div class="visor" id="img1">
+            <h3>Risko. Tranquilo pero sobre todo muy cariñoso!</h3>
+            <div class="ima">
+                <a href="#img4">&#60;</a>
+                <a href=""><img src='{% static "img/img1.jpg" %}' alt="ima1"></a>
+                <a href="#img2">></a>
+            </div>
+            <a class="cerrar" href="#galeria">X</a>
+        </div>
+        
+         <div class="visor" id="img2">
+            <h3>Niki. Juguetona y con mucha energia.</h3>
+            <div class="ima">
+                <a href="#img1">&#60;</a>
+                <a href="#"><img src='{% static "img/img2.jpg" %}' alt="ima2"></a>
+                <a href="#img3">></a>
+            </div>
+            <a class="cerrar" href="#galeria">X</a>
+        </div>
+        
+         <div class="visor" id="img3">
+            <h3>Rufo, curioso cachorro que está interesando en conocer una nueva familia. Ayudalo.</h3>
+            <div class="ima">
+                <a href="#img2">&#60;</a>
+                <a href="#"><img src='{% static "img/img3.jpg" %}' alt="ima3"></a>
+                <a href="#img4">></a>
+            </div>
+            <a class="cerrar" href="#galeria">X</a>
+        </div>
+        
+         <div class="visor" id="img4">
+            <h3>Vaquita. Le gustan los brazos,es una perrita atlética, de energía media a alta, por lo que necesita lugar en donde correr o dueños que aguanten su trote.</h3>
+            <div class="ima">
+                <a href="#img3">&#60;</a>
+                <a href="#"><img src='{% static "img/img4.jpg" %}' alt="ima4"></a>
+                <a href="#img5">></a>
+            </div>
+            <a class="cerrar" href="#galeria">X</a>
+        </div>
+        
+         <div class="visor" id="img5">
+            <h3>Rick. Ayudalo a recuperar la confianza. Este muchacho hermoso tiene mucha energía, y es muy cariñoso, jugueto y regalon.  Se merece una familia para toda la vida!</h3>
+            <div class="ima">
+                <a href="#img4">&#60;</a>
+                <a href="#"><img src='{% static "img/img5.jpg" %}' alt="ima5"></a>
+                <a href="#img6">></a>
+            </div>
+            <a class="cerrar" href="#galeria">X</a>
+        </div>
+        
+         <div class="visor" id="img6">
+            <h3>Bobby. Perrito cariñoso, protector y amante de los niños.</h3>
+            <div class="ima">
+                <a href="#img5">&#60;</a>
+                <a href="#"><img src='{% static "img/img6.jpg" %}' alt="ima6"></a>
+                <a href="#img1">></a>
+            </div>
+            <a class="cerrar" href="#galeria">X</a>
+        </div>
+        <footer>
+		  <p>Desarrollo web y mobile</p>
+	    </footer>
+  </body>
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'js/materialize.min.js' %}"></script>
+<script >$('.carousel.carousel-slider').carousel({
+    fullWidth: true});</script> 
+  </html>
+        
